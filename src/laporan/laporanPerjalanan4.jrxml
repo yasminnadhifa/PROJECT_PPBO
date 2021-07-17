@@ -6,8 +6,8 @@
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["C:\\Users\\USER\\Documents\\NetBeansProjects\\Aplikasi Perjalanan Dinas\\src\\aplikasi\\"]]></defaultValueExpression>
 	</parameter>
-	<queryString language="SQL">
-		<![CDATA[select * from perjalanan]]>
+	<queryString>
+		<![CDATA[SELECT * FROM perjalanan where month(tanggal)=4]]>
 	</queryString>
 	<field name="nip" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -25,6 +25,9 @@
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="lama_perjalanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<background>
@@ -61,80 +64,92 @@
 	<columnHeader>
 		<band height="54" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="0" y="31" width="67" height="23"/>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="0" y="31" width="50" height="23"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NIP]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="66" y="31" width="67" height="23"/>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="50" y="31" width="67" height="23"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Nama]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="133" y="31" width="92" height="23"/>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="117" y="31" width="92" height="23"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Instansi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="225" y="31" width="99" height="23"/>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="209" y="31" width="80" height="23"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Nama Kota]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="324" y="31" width="89" height="23"/>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="289" y="31" width="89" height="23"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Provinsi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="413" y="31" width="141" height="23"/>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="378" y="31" width="105" height="23"/>
 				<textElement>
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Lama Perjalanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="483" y="31" width="72" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="22" splitType="Stretch">
 			<textField>
-				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="67" y="0" width="67" height="20"/>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="50" y="0" width="67" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{nama_pegawai}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="133" y="0" width="92" height="20"/>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="117" y="0" width="92" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{instansi}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="225" y="0" width="99" height="20"/>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="209" y="0" width="80" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{nama_kota}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="324" y="0" width="89" height="20"/>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="289" y="0" width="89" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{provinsi}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="413" y="0" width="141" height="20"/>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="378" y="0" width="105" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{lama_perjalanan}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="0" y="0" width="66" height="20"/>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="0" y="0" width="50" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{nip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="483" y="0" width="72" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

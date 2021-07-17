@@ -19,7 +19,7 @@ public class konfig {
     
     public static java.sql.Connection configDB()throws SQLException{
         try{
-            String url = "jdbc:mysql://localhost:3306/projekuas";
+            String url = "jdbc:mysql://localhost:3306/projekuas_ppbo";
             String user = "root";
             String pass = "";
             

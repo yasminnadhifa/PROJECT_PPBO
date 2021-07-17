@@ -743,7 +743,7 @@ public class admin extends javax.swing.JFrame {
         try {
             String jdbcDriver ="com.mysql.jdbc.Driver";
             Class.forName("com.mysql.jdbc.Driver");
-            java.sql.Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/projekuas","root","");
+            java.sql.Connection koneksi = DriverManager.getConnection("jdbc:mysql://localhost/projekuas_ppbo","root","");
             Statement stm = koneksi.createStatement();
 
             try{

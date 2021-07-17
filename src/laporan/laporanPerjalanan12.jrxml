@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7d50ac42-b86e-4bfd-81fa-4b7fce7de519">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\USER\\Documents\\NetBeansProjects\\Aplikasi Perjalanan Dinas\\src\\aplikasi\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM perjalanan where month(tanggal)=12]]>
+	</queryString>
+	<field name="nip" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_pegawai" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="instansi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_kota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="provinsi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lama_perjalanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="625c3973-ff6a-45f9-b10f-7fadc16b4c2f" x="243" y="35" width="370" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pemerintah Kabupaten Riau                                                la]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="1a7f159a-bccf-4245-b7e9-2545c0e2b598" x="67" y="12" width="88" height="83"/>
+				<imageExpression><![CDATA["C:\\Users\\USER\\Downloads\\Logo-Kota-Pekanbaru-Provinsi-Riau-Indonesia-Original.jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement uuid="2b1487df-afcb-4e7e-853e-26c3ec692574" x="0" y="95" width="554" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="625c3973-ff6a-45f9-b10f-7fadc16b4c2f" x="148" y="55" width="370" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Perjalanan Dinas Kota Pekanbaru]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="0" y="31" width="50" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="50" y="31" width="67" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="117" y="31" width="92" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Instansi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="209" y="31" width="80" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Kota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="289" y="31" width="89" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Provinsi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="378" y="31" width="105" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lama Perjalanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="35b242f0-f558-4673-b3d9-2701b9965424" x="483" y="31" width="72" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="50" y="0" width="67" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_pegawai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="117" y="0" width="92" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{instansi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="209" y="0" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_kota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="289" y="0" width="89" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{provinsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="378" y="0" width="105" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{lama_perjalanan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="0" y="0" width="50" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e3ffa3bd-8468-47dd-911f-81216d92aade" x="483" y="0" width="72" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1200a36a-fe10-409a-a06f-8ed60ea8d6d5" x="346" y="17" width="87" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Dicetak pada, ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="2872e060-567c-425a-95a3-524117f5b7bd" x="413" y="37" width="139" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1200a36a-fe10-409a-a06f-8ed60ea8d6d5" x="346" y="37" width="67" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal   : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1200a36a-fe10-409a-a06f-8ed60ea8d6d5" x="346" y="57" width="67" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Pukul       :]]></text>
+			</staticText>
+			<textField pattern="h.mm a">
+				<reportElement uuid="091005f5-3006-4bfc-8f89-c94d50247fb9" x="413" y="57" width="139" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
